@@ -1,0 +1,111 @@
+@charset "utf-8";
+@font-face{
+    src: url("../fonts/DoHyeon-Regular.ttf");
+    font-family: 'Do Hyeon', sans-serif;
+}
+html * {
+    box-sizing: border-box;
+    font-family: 'Do Hyeon', sans-serif;
+}
+body {
+    margin: 0;
+    background: #ffffff;
+}
+
+.sidebar {
+	position: fixed;
+	width: 340px;
+	height: 100%;
+	padding: 50px 20px;
+	background: #e16e61;
+}
+.maincontents {
+	margin-left: 340px;
+	padding: 20px;
+}
+.header-logo {
+	margin: 0;
+	width: 300px;
+	height: 44px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+}
+nav {
+	margin: 0;
+	padding: 50px 0 0 0;
+}
+.globalnav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.globalnav li {
+	margin: 0 0 10px 0;
+}
+.globalnav li a {
+	display: block;
+	padding: 10px 20px;
+	border-bottom: 2px solid #ffffff;
+	text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+.globalnav li a:hover,
+.globalnav li a.current {
+	border-bottom: 2px solid #a3c675;
+	color: #a3c675;
+}
+.keyvisual {
+	font-size: 0;
+}
+.keyvisual img {
+	width: 100%;
+	border-radius: 10px;
+}
+.maincopy {
+	margin: 0;
+	padding: 30px 0;
+	text-align: center;
+    font-size: 30px;
+    color: #575757;
+    font-weight: bold;
+}
+.news {
+	margin: 0;
+	padding: 0 0 40px 0;
+}
+.news h2 {
+	margin: 20px 0 20px 0;
+    font-size: 20px;
+    color: #575757;
+}
+.news-contents {
+	margin: 0;
+	padding: 0;
+    list-style: none;
+    color: #575757;
+}
+.news-contents li {
+	overflow: hidden;
+	margin: 0 0 10px 0;
+	padding: 10px;
+	border: 1px solid #dadada;
+}
+.news-contents li img {
+	float: left;
+	margin-right: 10px;
+}
+.news-contents li p {
+	margin: 0;
+}
+footer {
+	padding: 20px 0;
+	border-top: 1px solid #e16e61;
+}
+.copyright {
+	margin: 0;
+	font-size: 20px;
+    text-align: right;
+    
+}

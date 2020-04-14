@@ -38,7 +38,7 @@ int result=0;
 			
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
-				ps.setString(1, shop.getShopId());
+				ps.setString(1, shop.getShopID());
 				ps.setString(2, shop.getShopName());
 				ps.setString(3, shop.getShopPw());
 				
@@ -60,7 +60,7 @@ int result=0;
 			@Override
 			public ShopVO mapRow(ResultSet rs, int rowNum) throws SQLException {
 				ShopVO shop = new ShopVO();
-				shop.setShopId(rs.getString("SHOP_ID"));
+				shop.setShopID(rs.getString("SHOP_ID"));
 				shop.setShopName(rs.getString("SHOP_NAME"));
 				shop.setShopPw(rs.getString("SHOP_PW"));
 				return shop;
@@ -110,7 +110,7 @@ int result=0;
 				@Override
 				public ShopVO mapRow(ResultSet rs, int rowNum) throws SQLException {
 					ShopVO shop = new ShopVO();
-					shop.setShopId(rs.getString("SHOP_ID"));
+					shop.setShopID(rs.getString("SHOP_ID"));
 					return shop;
 				}
 				

@@ -1,17 +1,15 @@
 package com.bomin.employeePractice.shop;
 
 public class ShopVO {
-	private String shopId;
+	
+	private String shopID;
 	private String shopName;
 	private String shopPw;
-	
-	
-	
-	public String getShopId() {
-		return shopId;
+	public String getShopID() {
+		return shopID;
 	}
-	public void setShopId(String shopId) {
-		this.shopId = shopId;
+	public void setShopID(String shopID) {
+		this.shopID = shopID;
 	}
 	public String getShopName() {
 		return shopName;
@@ -25,5 +23,6 @@ public class ShopVO {
 	public void setShopPw(String shopPw) {
 		this.shopPw = shopPw;
 	}
+	
 
 }
