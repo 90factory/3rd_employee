@@ -98,7 +98,30 @@ int result=0;
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+	@Override
+	public ShopVO shopSelect(ShopVO shop) {
+		
+	List<ShopVO> shops = null;
+			
+			final String sql = "SELECT * FROM EMPLOYEE WHERE SHOP_ID=?";
+			
+			shops = template.query(sql, new Object[]{}, new RowMapper<ShopVO>() {
+
+				@Override
+				public ShopVO mapRow(ResultSet rs, int rowNum) throws SQLException {
+					ShopVO shop = new ShopVO();
+					shop.setShopId(rs.getString("SHOP_ID"));
+					return shop;
+				}
+				
+			});
+			
+			if(shops.isEmpty()) 
+				return null;
+			
+			return shops.get(0);
+			
+		}
 	
 
 }

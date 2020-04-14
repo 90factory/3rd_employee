@@ -26,7 +26,9 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 	
 		
-		return "main.jsp";
+		
+		return "index3.jsp";
+		//return "/employeePractice/resources/html/main.html";
 	}
 	
 }

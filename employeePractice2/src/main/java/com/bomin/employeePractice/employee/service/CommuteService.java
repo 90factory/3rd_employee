@@ -12,13 +12,14 @@ public class CommuteService implements ICommuteService{
 	CommuteDao dao;
 	
 	@Override
-	public void checkIn(String phone) {
-		dao.checkIn(phone);	
+	public void checkIn(String finger) {
+		System.out.println("service" + finger);
+		dao.checkIn(finger);	
 	}
 	
 	@Override
-	public void checkOut(String phone) {
-		dao.checkOut(phone);
+	public void checkOut(String finger) {
+		dao.checkOut(finger);
 	}
 	
 

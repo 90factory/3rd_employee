@@ -1,16 +1,20 @@
 package com.bomin.employeePractice.employee.dao;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.bomin.employeePractice.URLReader;
 import com.bomin.employeePractice.employee.EmployeeVO;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
@@ -21,10 +25,16 @@ public class EmployeeDao implements IEmployeeDao{
 	private JdbcTemplate template;
 	
 	
+	
+	
 	@Autowired
 	public EmployeeDao(ComboPooledDataSource dataSource) {
 		
 		this.template = new JdbcTemplate(dataSource);
+	}
+	
+	public EmployeeDao() {
+		// TODO Auto-generated constructor stub
 	}
 
 
@@ -217,8 +227,66 @@ List<EmployeeVO> employees = null;
 	}
 
 
+	
+	@Override
+	public int fingerPrintInsert(EmployeeVO employee) throws JSONException, IOException {
+		int result=0;
+		
+		
+		final String sql = "UPDATE EMPLOYEE SET FINGERPRINT=? "
+				+ "WHERE EMPLOYEE_ID=?";
+		
+		result = template.update(sql, new PreparedStatementSetter() {
+			
+			@Override
+			public void setValues(PreparedStatement ps) throws SQLException {
+				ps.setString(1, employee.getEmFingerPrint());
+				ps.setInt(2, employee.getEmId());
+				
+			}
+		});
+
+		
+		return result;
+	}
 
 
+	@Override
+	public EmployeeVO fingerSearch(EmployeeVO employee) throws JSONException, IOException {
+List<EmployeeVO> employees = null;
+
+
+		final String sql = "SELECT * FROM EMPLOYEE WHERE FINGERPRINT=?";
+		
+		employees = template.query(sql, new Object[]{employee.getEmFingerPrint()}, new RowMapper<EmployeeVO>() {
+
+			@Override
+			public EmployeeVO mapRow(ResultSet rs, int rowNum) throws SQLException {
+				EmployeeVO employee = new EmployeeVO();
+				employee.setEmId(rs.getInt("EMPLOYEE_ID"));
+				employee.setEmName(rs.getString("NAME"));
+				employee.setEmPosition(rs.getString("POSITION"));
+				employee.setEmSecurityNum(rs.getString("SECURITY_NUM"));
+				employee.setEmOpenTime(rs.getString("OPEN_TIME"));
+				employee.setEmCloseTime(rs.getString("CLOSE_TIME"));
+				employee.setEmStartDate(rs.getString("START_DATE"));
+				employee.setEmEndDate(rs.getString("END_DATE"));
+				employee.setEmStatus(rs.getInt("STATUS"));
+				employee.setEmTeam(rs.getString("TEAM"));
+				employee.setEmPhone(rs.getString("PHONE"));
+				employee.setEmFingerPrint(rs.getString("FINGERPRINT"));
+				return employee;
+			}
+			
+		});
+		
+		if(employees.isEmpty()) 
+			return null;
+		
+		return employees.get(0);
+
+	
+	}
 
 
 	

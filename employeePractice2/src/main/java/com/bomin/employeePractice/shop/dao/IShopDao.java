@@ -15,6 +15,8 @@ public interface IShopDao {
 	int shopLogIn(String ID, String name);
 	
 	int shopLogOut();
+	
+	ShopVO shopSelect(ShopVO shop);
 }
 
 

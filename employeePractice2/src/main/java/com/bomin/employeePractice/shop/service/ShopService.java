@@ -41,5 +41,13 @@ public class ShopService implements IShopService{
 		return shops;
 	}
 	
+	@Override
+	public ShopVO shopSearch(ShopVO shop) {
+		shop = dao.shopSelect(shop);
+		
+		
+		
+		return shop;
+	}
 
 }

@@ -8,5 +8,5 @@ public interface IShopService {
 	void shopInsert(ShopVO shop);
 	List<ShopVO> shopSelectAll();
 	
-	
+	ShopVO shopSearch(ShopVO shop);
 }

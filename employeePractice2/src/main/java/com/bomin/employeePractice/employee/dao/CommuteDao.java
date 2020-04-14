@@ -28,9 +28,10 @@ public class CommuteDao implements ICommuteDao{
 	
 	
 	@Override
-	public int checkIn(String phoneN) {
+	public int checkIn(String finger) {
+		System.out.println("dao" + finger);
 		String checkIn = new SimpleDateFormat("yyyy/MM/dd.HH:mm:ss").format(new Date());
-		int employeeId = this.template.queryForObject("select EMPLOYEE_ID from EMPLOYEE where PHONE = ?", new Object[]{phoneN}, Integer.class);
+		int employeeId = this.template.queryForObject("select EMPLOYEE_ID from EMPLOYEE where FINGERPRINT = ?", new Object[]{finger}, Integer.class);
 		int result=0;
 		
 		final String sql = "INSERT INTO COMMUTE(CHECK_IN, EMPLOYEE_ID)"
@@ -51,9 +52,9 @@ public class CommuteDao implements ICommuteDao{
 		return result;	
 	}
 	@Override
-	public int checkOut(String phoneN) {
+	public int checkOut(String finger) {
 			String checkOut = new SimpleDateFormat("yyyy/MM/dd.HH:mm:ss").format(new Date());
-			int employeeId = this.template.queryForObject("select EMPLOYEE_ID from EMPLOYEE where PHONE = ?", new Object[]{phoneN}, Integer.class);
+			int employeeId = this.template.queryForObject("select EMPLOYEE_ID from EMPLOYEE where FINGERPRINT = ?", new Object[]{finger}, Integer.class);
 			int result=0;
 			
 			final String sql = "UPDATE COMMUTE SET(CHECK_OUT)=(?) WHERE EMPLOYEE_ID=? AND CHECK_OUT IS NULL";

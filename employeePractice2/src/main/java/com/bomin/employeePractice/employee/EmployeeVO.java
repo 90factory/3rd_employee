@@ -14,10 +14,17 @@ public class EmployeeVO {
 	private String emEndDate;
 	private int emStatus;
 	private String emPhone;
+	private String emFingerPrint;
 	
 	
 	
 	
+	public String getEmFingerPrint() {
+		return emFingerPrint;
+	}
+	public void setEmFingerPrint(String emFingerPrint) {
+		this.emFingerPrint = emFingerPrint;
+	}
 	public int getEmId() {
 		return emId;
 	}
