@@ -12,6 +12,7 @@ public class CommuteService implements ICommuteService{
 	CommuteDao dao;
 	
 	@Override
+<<<<<<< HEAD
 	public void checkIn(String finger) {
 		System.out.println("service" + finger);
 		dao.checkIn(finger);	
@@ -20,6 +21,15 @@ public class CommuteService implements ICommuteService{
 	@Override
 	public void checkOut(String finger) {
 		dao.checkOut(finger);
+=======
+	public void checkIn(String phone) {
+		dao.checkIn(phone);	
+	}
+	
+	@Override
+	public void checkOut(String phone) {
+		dao.checkOut(phone);
+>>>>>>> branch 'master' of https://github.com/90factory/3rd_employee.git
 	}
 	
 

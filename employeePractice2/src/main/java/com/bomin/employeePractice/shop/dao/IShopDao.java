@@ -15,8 +15,11 @@ public interface IShopDao {
 	int shopLogIn(String ID, String name);
 	
 	int shopLogOut();
+<<<<<<< HEAD
 	
 	ShopVO shopSelect(ShopVO shop);
+=======
+>>>>>>> branch 'master' of https://github.com/90factory/3rd_employee.git
 }
 
 

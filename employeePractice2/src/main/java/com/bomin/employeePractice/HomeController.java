@@ -26,9 +26,13 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 	
 		
+<<<<<<< HEAD
 		
 		return "index3.jsp";
 		//return "/employeePractice/resources/html/main.html";
+=======
+		return "main.jsp";
+>>>>>>> branch 'master' of https://github.com/90factory/3rd_employee.git
 	}
 	
 }

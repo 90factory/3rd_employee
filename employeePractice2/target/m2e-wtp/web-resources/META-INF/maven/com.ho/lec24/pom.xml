@@ -175,6 +175,7 @@
     <version>2.9.2</version>
 </dependency>
         
+<<<<<<< HEAD
         
     <!-- https://mvnrepository.com/artifact/org.json/json -->
 <dependency>
@@ -190,6 +191,8 @@
     <version>1.2</version>
 </dependency>
 
+=======
+>>>>>>> branch 'master' of https://github.com/90factory/3rd_employee.git
 		      
 	</dependencies>
     <build>

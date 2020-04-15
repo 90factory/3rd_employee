@@ -38,6 +38,7 @@ int result=0;
 			
 			@Override
 			public void setValues(PreparedStatement ps) throws SQLException {
+<<<<<<< HEAD
 				ps.setString(1, shop.getShopID());
 				ps.setString(2, shop.getShopName());
 				ps.setString(3, shop.getShopPw());
@@ -122,6 +123,69 @@ int result=0;
 			return shops.get(0);
 			
 		}
+=======
+				ps.setString(1, shop.getShopId());
+				ps.setString(2, shop.getShopName());
+				ps.setString(3, shop.getShopPw());
+				
+			}
+		});
+
+		
+		return result;
+	}
+	
+	@Override
+	public List<ShopVO> shopSelectAll() {
+		List<ShopVO> shops = null;
+
+		final String sql = "SELECT * FROM SHOP";
+		
+		shops = template.query(sql, new Object[]{}, new RowMapper<ShopVO>() {
+
+			@Override
+			public ShopVO mapRow(ResultSet rs, int rowNum) throws SQLException {
+				ShopVO shop = new ShopVO();
+				shop.setShopId(rs.getString("SHOP_ID"));
+				shop.setShopName(rs.getString("SHOP_NAME"));
+				shop.setShopPw(rs.getString("SHOP_PW"));
+				return shop;
+			}
+			
+		});
+		
+		if(shops.isEmpty()) 
+			return null;
+		
+		return shops;	
+	}
+	
+	@Override
+	public ShopVO shopSelectByID(String ID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public int shopUpdate(ShopVO shop) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	@Override
+	public int shopLogIn(String ID, String name) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public int shopLogOut() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+>>>>>>> branch 'master' of https://github.com/90factory/3rd_employee.git
 	
 
 }

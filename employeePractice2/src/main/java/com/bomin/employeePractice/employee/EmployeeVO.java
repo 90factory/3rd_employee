@@ -14,6 +14,7 @@ public class EmployeeVO {
 	private String emEndDate;
 	private int emStatus;
 	private String emPhone;
+<<<<<<< HEAD
 	private String emFingerPrint;
 	
 	
@@ -25,6 +26,12 @@ public class EmployeeVO {
 	public void setEmFingerPrint(String emFingerPrint) {
 		this.emFingerPrint = emFingerPrint;
 	}
+=======
+	
+	
+	
+	
+>>>>>>> branch 'master' of https://github.com/90factory/3rd_employee.git
 	public int getEmId() {
 		return emId;
 	}

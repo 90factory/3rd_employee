@@ -41,6 +41,7 @@ public class ShopService implements IShopService{
 		return shops;
 	}
 	
+<<<<<<< HEAD
 	@Override
 	public ShopVO shopSearch(ShopVO shop) {
 		shop = dao.shopSelect(shop);
@@ -49,5 +50,7 @@ public class ShopService implements IShopService{
 		
 		return shop;
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/90factory/3rd_employee.git
 
 }
