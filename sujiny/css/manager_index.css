@@ -14,7 +14,7 @@ html * {
 }
 body {
 	margin: 0;
-	background: url(../images/bg.png);
+	background: url(/resources/sj/images/bg.png);
 	font-family: 'Do Hyeon', sans-serif;	
 }
 /* 스크롤 고정 */
