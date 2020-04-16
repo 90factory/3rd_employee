@@ -65,13 +65,13 @@
                 console.log(employeeSelectForm);
 
                 $.ajax({
-                    url:'/checkIn.json',// 요청 할 주소
+                    url:'/WEB-INF/views/employee_index.jsp',// 요청 할 주소
                     type:'GET',
                     // dataType:'html',// xml, json, script, html
                     success:res => { 
                         console.log(res); 
                         for(let i=0;i<res.data.data.length;i++){ 
-                            
+
                             let employeeOption = document.createElement("option"); //넣을 태그(것)
 
                             employeeOption.innerText=res.data.data[i].emName; //넣을 것에 대한 내용 설정
