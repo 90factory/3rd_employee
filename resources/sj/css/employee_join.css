@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+h1 {
+	font-size: 24px;
+}
+select{
+    font-size: 15px;
+    padding-right: 220px;
+    border: 2px solid #ccc;
+}
+input[type="text"], input[type="password"], input[type="tel"]{
+    border: 2px solid #ccc;
+    width: 300px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 16px;
+}
+textarea{
+    border: 2px solid #ccc;
+    width: 50px;
+    height: 160px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 16px;
+    color: #ccc;
+}
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+	background: #faf4e2;
+}

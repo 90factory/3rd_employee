@@ -1,0 +1,46 @@
+{
+    "data":{
+        "result": true,
+        "data": [
+            {
+                "emId": 61,
+                "emPosition": "직원",
+                "emName": "김수진",
+                "emTeam": "자바스크립트",
+                "emSecurityNum": "870331-2",
+                "emOpenTime": "18:00",
+                "emStartDate": "2019-11-20",
+                "emEndDate": "2020-03-20",
+                "emStaus": 2,
+                "emPhone": "010-1111-1111",
+                "emFingerPrint": null
+            },
+            {
+                "emId": 62,
+                "emPosition": "사장",
+                "emName": "윤보민",
+                "emTeam": "자바",
+                "emSecurityNum": "870321-2",
+                "emOpenTime": "18:00",
+                "emStartDate": "2019-11-20",
+                "emEndDate": "2030-03-20",
+                "emStaus": 2,
+                "emPhone": "010-2222-2222",
+                "emFingerPrint": null
+            },
+            {
+                "emId": 63,
+                "emPosition": "직원",
+                "emName": "이재혁",
+                "emTeam": "자바스크립트",
+                "emSecurityNum": "870331-1",
+                "emOpenTime": "18:00",
+                "emStartDate": "2019-11-20",
+                "emEndDate": "2120-03-20",
+                "emStaus": 1,
+                "emPhone": "010-3333-3333",
+                "emFingerPrint": null
+            }
+        ]
+    }
+}
