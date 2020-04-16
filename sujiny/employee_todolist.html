@@ -52,33 +52,53 @@
             <div class="profile"><img src="images/profile.jpg" alt="">
             </div><!--/profile-top-->
 
-            <div class="profile-middle">
+            <div class="todolist_contents">
                 <table>
                     <thead>
-                        <tr><th colspan="5">4월 일정</th></tr>
+                        <tr><th colspan="8">해야할 일</th></tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="2">시작할 일</td>
-                            <td colspan="2">끝낸 일</td>
+                            <td colspan="4">시작할 일</td>
+                            <td colspan="4">끝마친 일</td>
                         </tr>
                         <tr class="hours">
                             <td class="active">
-                                <span> </span>
+                                <span>11:00</span>
+                                <input type="checkbox" checked />
+                            </td>
+                            <td>
+                                <span>13:00</span>
                                 <input type="checkbox" />
                             </td>
                             <td class="active">
-                                <span>  </span>
+                                <span>18:00</span>
+                                <input type="checkbox" checked="" />
+                            </td>
+                            <td>
+                                <span>22:00</span>
+                                <input type="checkbox" />
+                            </td>
+                            <td>
+                                <span>15:00</span>
+                                <input type="checkbox" />
+                            </td>
+                            <td class="active">
+                                <span>08:00</span>
+                                <input type="checkbox" checked="" />
+                            </td>
+                            <td>
+                                <span>19:00</span>
+                                <input type="checkbox" />
+                            </td>
+                            <td>
+                                <span>23:50</span>
                                 <input type="checkbox" />
                             </td>
                         </tr>
                     </tbody>
                 </table>
-            </div><!--/profile-middle-->
-            
-            <div class="profile-bottom">
-            </div><!--/bottom-->
-            
+            </div><!--/todolist_contents-->
 
             <div class="notice">
                 <p>
@@ -114,10 +134,10 @@
                     url:'/todolist',
                     type: 'PUT',
                     data: [
-                            {toDoID:7, toDo: "킴킴", toDoDate: "2020-03-15", todoCheck: 0},
-                            {toDoID:2, toDo: "김", toDoDate: "2020-03-15", todoCheck: 0},
-                            {toDoID:3, toDo: "김수", toDoDate: "2020-03-15", todoCheck: 0},
-                            {toDoID:4, toDo: "김수진", toDoDate: "2020-03-15", todoCheck: 0},
+                            {toDoID:7, toDo: "내일은 정말 뭐하냐", toDoDate: "2020-03-08", todoCheck: 0},
+                            {toDoID:2, toDo: "자바공부하자", toDoDate: "2020-03-11", todoCheck: 0},
+                            {toDoID:3, toDo: "421", toDoDate: "2020-03-11", todoCheck: 0},
+                            {toDoID:4, toDo: "어려워", toDoDate: "2020-03-12", todoCheck: 0},
                         ],
                     success: function(result){
                         

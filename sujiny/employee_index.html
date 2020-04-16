@@ -71,7 +71,9 @@
                     success:res => { 
                         console.log(res); 
                         for(let i=0;i<res.data.data.length;i++){ 
+                            
                             let employeeOption = document.createElement("option"); //넣을 태그(것)
+
                             employeeOption.innerText=res.data.data[i].emName; //넣을 것에 대한 내용 설정
                             employeeSelectForm.appendChild(employeeOption); //넣을곳.appendchild(넣을 것)을 하면 넣을 곳에 넣을 것이 들어간다.
                         }

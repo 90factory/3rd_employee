@@ -101,45 +101,68 @@ li.checkOut{
 	width: 1530px;
 	height: 400px;
 }
-
+#todo_form{
+	margin: 3em auto;
+	border: 3px solid #f9b948;
+	width: 1530px;
+	margin-left: -20px;
+	
+	margin-top: -10px;
+	padding: 0;
+}
+.todo_title{
+	padding: 20px;
+	background: #f9b948;
+	margin: 0;
+	color: #535353;
+}
+.todo_line{
+	float: left;
+	border: 2px solid #dadada;
+	margin-top: 3px;
+	margin-left: -3px;
+	padding-right: 471px;
+}
+.todolist_contents{
+	margin: 0;
+	padding: 20px;
+	text-align: center;
+}
+input[type="todo_list"], input[type="done_list"]{
+	padding: 0;
+	font-size: 20px;
+	border-style: none;
+}
 /*캘린더*/
+.todolist_contents{
+	padding: 0;
+	margin: 0;
+	padding-left: -3px;
+}
 table{
 	font-family: 'Do Hyeon', sans-serif;
-	width: 1533px;
-	font-size: 20px;
-	padding-top: 10px;
+	font-size: 15px;
 }
 table thead{
-	background-color: #a3c675;
-	font-size: 25px;
-	color: #fff;
+	background-color: #f9b948;
 }
 table thead tr th{
 	padding: 15px 10px;
-	font-size: 25px;
 }
 table tbody tr td{
 	padding: 15px 10px;
 	text-align: center;
 	border: 1px solid #cdcdcd;
-	color: #4e4e4e;
 }
 table tbody tr.hours td{
-	background-color:#fff;
-	height: 260px;
+	background-color:#ffe9c4;
 }
 table tbody tr.hours td.active{
-	background-color:#fff;
-	height: 260px;
+	background-color:#fcc4be;
 }
 table tbody tr td span{
-	display: table;
-	width: 100%;
+	display: table;width: 100%;
 }
-
-
-
-
 
 .maincopy {
 	margin: 0;
