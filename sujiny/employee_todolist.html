@@ -97,18 +97,40 @@
                     // dataType:'html',// xml, json, script, html
                     success:res => { 
                         console.log(res); 
-                        for(let i=0;i<res.data.data.length;i++){ 
+                        for(let i=0;i<res.data.length;i++){ 
                             let employeeOption = document.createElement("option"); //넣을 태그(것)
-                            employeeOption.innerText=res.data.data[i].emName; //넣을 것에 대한 내용 설정
+                            employeeOption.innerText=res.data[i].emName; //넣을 것에 대한 내용 설정
                             employeeSelectForm.appendChild(employeeOption); //넣을곳.appendchild(넣을 것)을 하면 넣을 곳에 넣을 것이 들어간다.
                         }
                     },// 요청 완료 시
                     error:err => console.log(err),// 요청 실패.
                 });
 
-                $.ajax({
-                    url:'/todolist',
+                document.querySelector('.checkIn').addEventListener('click', postCommute());
+                function postCommute(){ 
+                $.ajax({    //출근
+                    url: '/commute',
+                    type: 'POST',
+                    success: res=>{
+                        console.log(res);
+                        alert("출근 완료!");
+                    }
+                });
+                }
+                document.querySelector('.checkOut').addEventListener('click', putCommute());
+                function putCommute(){
+                $.ajax({    //퇴근
+                    url: '/commute',
                     type: 'PUT',
+                    success: res=>{
+                        console.log(res);
+                        alert("퇴근 완료!");
+                    }
+                });
+                }   
+                $.ajax({
+                    url:'/toDo/25',
+                    type: 'GET',
                     data: [
                             {toDoID:7, toDo: "내일은 정말 뭐하냐", toDoDate: "2020-03-08", todoCheck: 0},
                             {toDoID:2, toDo: "자바공부하자", toDoDate: "2020-03-11", todoCheck: 0},
@@ -118,7 +140,7 @@
                     success: function(result){
                         
                     },
-                })
+                });
 
                 // 서버가 데이터를 받는 방식 Nodejs에서!
                 // app.get('/todolist',function(req,res){
