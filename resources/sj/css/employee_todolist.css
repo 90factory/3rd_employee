@@ -1,6 +1,6 @@
 @charset "utf-8";
 @font-face{
-    src: url("../fonts/DoHyeon-Regular.ttf");
+    src: url("../resources/sj/fonts/DoHyeon-Regular.ttf");
     font-family: 'Do Hyeon', sans-serif;
 }
 html * {
@@ -27,7 +27,7 @@ body {
 	margin: 0;
 	width: 300px;
 	height: 44px;
-	background-image: url(../images/logo.png);
+	background-image: url(../resources/sj/images/logo.png);
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 }
@@ -137,21 +137,22 @@ input[type="todo_list"], input[type="done_list"]{
 .todolist_contents{
 	padding: 0;
 	margin: 0;
-	padding-left: -3px;
+	width: 100%;
 }
 table{
 	font-family: 'Do Hyeon', sans-serif;
-	font-size: 15px;
+	font-size: 25px;
 }
 table thead{
 	background-color: #f9b948;
 }
 table thead tr th{
-	padding: 15px 10px;
+	padding: 25px 10px;
+	width: 1530px;
+	height: 30px;
 }
 table tbody tr td{
 	padding: 15px 10px;
-	text-align: center;
 	border: 1px solid #cdcdcd;
 }
 table tbody tr.hours td{
@@ -161,7 +162,8 @@ table tbody tr.hours td.active{
 	background-color:#fcc4be;
 }
 table tbody tr td span{
-	display: table;width: 100%;
+	display: table;
+	width: 100%;
 }
 
 .maincopy {
