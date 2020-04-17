@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import "addon.css";
-
+@import "adminLogin.css";
 html {
   font-size: 20px;
 }
