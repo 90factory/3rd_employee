@@ -15,7 +15,7 @@ html * {
 }
 body {
   margin: 0;
-  background: url(../resources/images/bg.png);
+  background: url(../resources/jh/images/bg.png);
   font-family: "Do Hyeon", sans-serif;
 }
 /* 스크롤 고정 */
@@ -319,12 +319,9 @@ table tbody tr td span {
   background: #a3c675;
   color: #fff;
 }
-.HomeTable tbody tr:nth-child(2n) {
-  background: #ecfafc;
-}
-.HomeTable tr:hover {
+.HomeTable tbody tr:hover {
   cursor: default;
-  background: #c0e690;
+  background-color: #c0e690;
 }
 
 .moveDate {
