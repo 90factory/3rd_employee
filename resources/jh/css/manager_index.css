@@ -15,7 +15,7 @@ html * {
 }
 body {
   margin: 0;
-  background: url(../resources/jh/images/bg.png);
+  background: url(/resources/jh/images/bg.png);
   font-family: "Do Hyeon", sans-serif;
 }
 /* 스크롤 고정 */
@@ -44,7 +44,7 @@ header {
   margin: 0;
   width: 300px;
   height: 40px;
-  background-image: url(../images/logo.png);
+  background-image: url(/resources/jh/images/logo.png);
   background-size: 300px 40px;
   background-repeat: no-repeat;
   text-indent: -9999px;
@@ -75,7 +75,7 @@ nav {
   list-style: none;
 }
 .globalnav li {
-  flex: 0 0 20%;
+  flex: 0 0 33.33%;
 }
 .globalnav li a {
   display: block;
@@ -301,6 +301,7 @@ table tbody tr td span {
   width: 100%;
 }
 
+.LogTable,
 .HomeTable {
   border-collapse: collapse;
   width: 100%;
@@ -324,8 +325,14 @@ table tbody tr td span {
   background-color: #c0e690;
 }
 
-.moveDate {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.LogTable td,
+.LogTable th {
+  font-weight: 900;
+  width: 300px;
+  padding: 8px 0px;
+  border: 1px solid #b7b7b7;
+}
+
+tr th:first-child {
+  width: 100px;
 }
