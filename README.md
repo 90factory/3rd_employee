@@ -21,3 +21,9 @@
 ### 아키텍처
 
 <img src="./ReadMe/Arch.jpg">
+
+### `Admin Page`
+
+Admin Page 의 상세 내용은
+(https://github.com/jhlee225/hello-employee-admin)
+에서도 확인 하실 수 있습니다.
